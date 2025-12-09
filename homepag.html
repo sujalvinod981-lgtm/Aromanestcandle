@@ -1,0 +1,577 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aromaeast</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .navbar {
+            float: center;
+            margin-left: 100px;
+            margin-top: 20px;
+
+        }
+
+        .red-blue-glow {
+            font-weight: 700;
+            color: rgb(10, 57, 110), rgb(10, 55, 110);
+            background: linear-gradient(90deg, rgb(82, 91, 111), rgb(10, 57, 110), rgb(10, 55, 110), rgb(82, 95, 115));
+            border-radius: 10px;
+
+            /* color: transparent; */
+
+            text-shadow:
+                0 0 5px #60031a,
+                0 0 10px #60031a,
+                0 0 20px #031e48,
+                0 0 40px #021a3e,
+                0 0 80px #4d0312;
+
+            animation: shineMove 5s linear infinite;
+        }
+        .light{
+            background: linear-gradient(90deg, rgb(82, 91, 111), rgb(10, 57, 110), rgb(10, 55, 110), rgb(82, 95, 115));
+     background-clip: text;
+    /*-webkit-background-clip: text; apply gradient to text only */
+    -webkit-text-fill-color: transparent; /* hide actual text color */
+        }
+
+        .logo {
+            display: flex;
+            border-radius: 20px;
+            justify-content: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 100px;
+            /* margin-bottom: 50px; */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .lead {
+
+            font-size: 1.25rem;
+
+            font-weight: 300;
+
+            font-style: italic;
+
+        }
+
+        .btn {
+
+            margin: 20px;
+
+            padding: 12px 20px;
+
+            border: 1px solid #673f03;
+
+            border-radius: 10px;
+
+
+            cursor: pointer;
+
+            transition: background-color 0.3s;
+
+            &:hover {
+
+                background-color: darken(#c60dc0, 5%);
+
+            }
+
+        }
+
+
+
+
+
+        /* .hero {
+
+            .hero {
+
+                background: linear-gradient(135deg, #ff9ecb, #ffdde1);
+
+                padding: 80px 0;
+
+                color: rgb(236, 154, 154);
+
+            }
+
+
+
+        } */
+
+
+
+        .photo {
+
+            /* display: flex; */
+
+            flex-direction: column;
+            gap: 50px;
+
+        }
+
+        
+        .feature {
+
+            display: flex;
+
+            border: 1px solid rgba(97, 97, 95, 0.2);
+
+            border-radius: 30px;
+
+            box-shadow: 0 4px 8px rgba(97, 97, 95, 0.2);
+
+            margin-top: 100px;
+
+            width: 100%;
+
+
+        /* height: 300px; */
+
+        }
+
+
+
+        .box1,
+
+        .box2,
+        .box3 {
+
+            display: flex;
+
+            padding: 20px;
+
+            margin: 10px;
+
+            border: 1px solid #5c4303;
+
+            border-radius: 10px;
+
+            /* background-color: #f9f9f9; */
+            /* background-color: rgb(42, 60, 86); */
+
+
+            width: 50%;
+
+            &:hover {
+                filter: brightness(90%);
+                cursor: pointer;
+            }
+
+
+
+            /* background: linear-gradient(135deg, #f4e3ec, #ebe0e1);
+
+               
+
+                color: rgb(242, 225, 225); */
+
+
+
+        }
+
+
+
+        .list {
+
+            justify-content: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            padding: 10px;
+
+        }
+
+
+
+
+
+
+        .hero {
+            align-items: center;
+            margin-top: 50px;
+
+        }
+        .pre{
+            text-align: center;
+            background: linear-gradient(90deg, rgb(82, 91, 111), rgb(10, 57, 110), rgb(10, 55, 110), rgb(82, 95, 115));
+            background-clip: text;
+           /*-webkit-background-clip: text; apply gradient to text only */
+           -webkit-text-fill-color: transparent; /* hide actual text color */
+        }
+
+        .pricing {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            border: 1px solid rgba(97, 97, 95, 0.2);
+            border-radius: 30px;
+        }
+
+        .gradient {
+            background: linear-gradient(90deg, rgb(82, 91, 111), rgb(10, 57, 110), rgb(10, 55, 110), rgb(82, 95, 115));
+            border-radius: 10px;
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .feature {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns on tablet */
+                gap: 25px;
+                padding: 30px;
+            }
+        }
+
+        /* resposive design for mobile and tab devices */
+
+        /*
+   PHONE (max-width: 768px)
+    */
+@media (max-width: 768px) {
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .photo img {
+        width: 90%;
+        height: auto;
+    }
+
+    .hero .container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Feature section becomes 1 column */
+    .feature {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .box1, .box2, .box3 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Pricing cards – 1 per row */
+    .pricing .col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+
+/* ==============================
+   📲 TABLET (769px – 1024px)
+   ============================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+    }
+
+    .photo img {
+        width: 70%;
+    }
+
+    /* Feature section – 2 columns */
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .box1, .box2, .box3 {
+        width: 100%;
+        padding: 25px;
+    }
+
+    /* Last box goes full width */
+    .box3 {
+        grid-column: span 2;
+    }
+
+    /* Pricing section – 2 per row */
+    .pricing .col {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    /* Last card takes full width */
+    .pricing .col:last-child {
+        width: 100%;
+    }
+}
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- </nav> -->
+    <div>
+        <nav class="navbar">
+            <div class="name">
+                <h2 class="red-blue-glow"><i>Aromanest</i></h2>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="logo">
+        <div class="photo">
+            <img src="logo.png" alt="Candle Image" width="600" height="400">
+        </div>
+
+        <div class="hero flex-direction align-content">
+            <div class="container text-center my-5 d-flex flex-column align-items-right">
+                <h1 class="Light">Light with Aromanest</h1>
+                <p class="lead">Not just a candle, but a story waiting to be shared.</p>
+                <p>Crafted with passion, glowing with memories.</p>
+                <p>Aromanest makes every moment special.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- featured products section -->
+
+    <div class="feature">
+
+        <div class="box1">
+
+            <div class="title">
+
+                <h2 class="text-center">What make our candles special?</h2>
+
+                <ul class="list">
+
+                    <li>Candles with meaning. Fragrance with purpose.</li>
+
+                    <li>Candles that inspire. Scents that uplift.</li>
+
+                    <li>Candles for every moment. Memories in the making.</li>
+
+                </ul>
+
+                <a href="Explore.html" class="Explore-button"><button class="btn">Explore More</button></a>
+
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="box2">
+
+            <div class="title">
+
+                <h2 class="text-center">Our Candles Stories</h2>
+
+                <ul class="list">
+
+                    <li>Candles that tell a story. Scents that evoke memories.</li>
+
+                    <li>Candles for relaxation. Scents that calm the mind.</li>
+
+                    <li>Candles for celebration. Scents that uplift the spirit.</li>
+
+                </ul>
+
+                <a href="Story.html" class="story"> <button class="btn">story</button></a>
+
+            </div>
+
+        </div>
+
+        <div class="box3">
+
+            <div class="title">
+
+                <h2 class="text-center">Our Candles </h2>
+
+                <ul class="list">
+
+                    <li>Calm Candles</li>
+
+                    <li>Hope Candles</li>
+
+                    <li>Relaxation Candles</li>
+
+                    <li>Joy Candles</li>
+
+                    <li>Love Candles</li>
+
+
+                </ul>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="pricing">
+
+
+
+
+
+        <main>
+            <h1 class = "pre"text-align: center; >Pricing</h1>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Scented Candles</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">75 rupees<small
+                                    class="text-body-secondary fw-light">/per piece</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Floral Scents</li>
+                                <li>Fruity Scents</li>
+                                <li>Aromatherapy Scents</li>
+                                <li>Woody & Earthy Scents</li>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">“A candle that carries story”</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">250<small
+                                    class="text-body-secondary fw-light">/per piece</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>💛 Soft & Cozy</li>
+                                <li>💙 Calm & Relaxing</li>
+                                <li>💚 Fresh & Invigorating</li>
+                                <li>🧡 Warm & Comforting</li>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class=" card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="Enterprise">A Candle That Awakens Your Senses</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">550<small
+                                    class="text-body-secondary fw-light">/per piece</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <h3>Premium & Scientific</h3>
+                                <li>🕯️ 1. Hope Candle</li>
+                                <li>🕯️ 2. Dream Candle</li>
+                                <li>🕯️ 3. Focus Candle</li>
+                                <p>Whichever your heart needs — we craft the candle you want.</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    </div>
+
+
+
+
+
+</body>
+
+<div class="gradient">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3"> <a href="/"
+                class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">
+                <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                    <use xlink:href="#bootstrap"></use>
+                </svg> </a>
+            <p class="text-body-secondary">© Aromanest</p>
+        </div>
+        <div class="col mb-3"></div>
+        <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="homepag.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="Story.html" class="nav-link p-0 text-body-secondary">Story</a></li>
+                <li class="nav-item mb-2"><a href="Explore.html" class="nav-link p-0 text-body-secondary">Specia
+                        thing</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/sujal-shinde-854b29357?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="nav-link p-0 text-body-secondary">Sujal Shinde LinkedIn.</a></li>
+                
+                
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="homepag.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="Story.html" class="nav-link p-0 text-body-secondary">Story</a></li>
+                <li class="nav-item mb-2"><a href="Explore.html" class="nav-link p-0 text-body-secondary">Specia
+                        thing</a></li>
+                <li class="nav-item mb-2"><a href="https://www.instagram.com/sujal_shinde0?igsh=MWc2YWtxNXVuYnY3Zg==" class="nav-link p-0 text-body-secondary">Sujal Shinde Instagram.</a></li>
+                
+            </ul>
+        </div>
+        <div class="col mb-3">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="homepag.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="Story.html" class="nav-link p-0 text-body-secondary">Story</a></li>
+                <li class="nav-item mb-2"><a href="Explore.html" class="nav-link p-0 text-body-secondary">Specia
+                        thing</a></li>
+</li>
+
+                
+                <li class="nav-item mb-2"><a href="https://github.com/sujalvinod981-lgtm/start" class="nav-link p-0 text-body-secondary"> Sujal Shinde github</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+
+</html>
