@@ -12,13 +12,18 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <style>
-        * {
-    background: linear-gradient(
+       
+
+ 
+        *{
+         background: linear-gradient(
         90deg,
         rgb(1, 15, 32),
-        
+        /* rgb(21, 41, 64), */
         rgb(1, 15, 32)
-    );
+   
+    );  
+}
         .navbar {
             float: center;
             margin-left: 100px;
@@ -28,7 +33,7 @@
 
         .red-blue-glow {
             font-weight: 700;
-            color: rgb(10, 57, 110), rgb(10, 55, 110);
+            color: rgb(10, 57, 110), rgb(10, 55, 110) ;
             background: linear-gradient(90deg, rgb(82, 91, 111), rgb(10, 57, 110), rgb(10, 55, 110), rgb(82, 95, 115));
             border-radius: 10px;
 
@@ -44,6 +49,7 @@
             animation: shineMove 5s linear infinite;
         }
         .light{
+         
             background: linear-gradient(90deg, rgb(82, 91, 111), rgb(10, 57, 110), rgb(10, 55, 110), rgb(82, 95, 115));
      background-clip: text;
     /*-webkit-background-clip: text; apply gradient to text only */
@@ -52,10 +58,12 @@
 
         .logo {
             display: flex;
+        
             border-radius: 20px;
             justify-content: center;
-            margin-left: 100px;
-            margin-right: 100px;
+
+            margin-left: 50px;
+            margin-right: 50px;
             margin-top: 100px;
             /* margin-bottom: 50px; */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -120,11 +128,12 @@
         .photo {
 
             /* display: flex; */
-
+            float: right;
             flex-direction: column;
-            gap: 50px;
+            /* gap: 50px; */
 
         }
+        
 
         
         .feature {
@@ -357,18 +366,24 @@
 
 
     <div class="logo">
-        <div class="photo">
-            <img src="logo.png" alt="Candle Image" width="600" height="400">
-        </div>
+        <!-- <div class="photo">
+            <img src="logo.png" alt="Candle Image" width="600" height="400" >
+        </div> -->
 
-        <div class="hero flex-direction align-content">
-            <div class="container text-center my-5 d-flex flex-column align-items-right">
+        <div class="word">
+            <div class="container text-center my-5 d-flex flex-column ">
                 <h1 class="Light">Light with Aromanest</h1>
                 <p class="lead">Not just a candle, but a story waiting to be shared.</p>
                 <p>Crafted with passion, glowing with memories.</p>
                 <p>Aromanest makes every moment special.</p>
             </div>
+           
+
         </div>
+        <div class="photo">
+            <img src="logo.png" alt="Candle Image" width="600" height="400" >
+        </div>
+
     </div>
 
 
@@ -574,7 +589,7 @@
 </li>
 
                 
-                <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-body-secondary">sujalvinod981@gmail.com</a></li>
+                <li class="nav-item mb-2"><a href="https://github.com/sujalvinod981-lgtm/start" class="nav-link p-0 text-body-secondary"> Sujal Shinde github</a></li>
             </ul>
         </div>
     </footer>
@@ -582,6 +597,3 @@
 
 
 </html>
-
-
-
